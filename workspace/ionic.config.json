@@ -1,0 +1,11 @@
+{
+    "defaultProject": "main",
+    "projects": {
+        "main": {
+            "name": "main",
+            "integrations": {},
+            "type": "angular",
+            "root": "projects/main"
+        }
+    }
+}

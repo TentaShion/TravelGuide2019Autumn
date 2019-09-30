@@ -1,0 +1,28 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "component-class-suffix": [
+      true,
+      "Page",
+      "Component"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "page",
+      "kebab-case"
+    ],
+    "deprecation": {
+      "severity": "warn"
+    },
+    "directive-class-suffix": true,
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "one-variable-per-declaration": false
+  }
+}
