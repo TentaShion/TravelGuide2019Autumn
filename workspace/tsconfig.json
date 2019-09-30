@@ -24,6 +24,12 @@
       ],
       "core/*": [
         "dist/core/*"
+      ],
+      "datasource": [
+        "dist/datasource"
+      ],
+      "datasource/*": [
+        "dist/datasource/*"
       ]
     }
   },
