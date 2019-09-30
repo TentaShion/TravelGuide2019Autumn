@@ -56,7 +56,7 @@ log.txt
 /.vscode
 /platforms
 /plugins
-/www
+**/www/
 
 
 
