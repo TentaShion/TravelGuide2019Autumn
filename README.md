@@ -53,15 +53,22 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
 
 ### お試し環境
 1. あらかじめDocker エンジンを起動しておきます
-2. ローカルで```ionic start https://github.com/TentaShion/Ionic4AngularTemplate``` を実行し、このテンプレートを入手します
-3. 手順２で作成したワークスペースをVisual Studio Code で開きます
+2. ローカルで```ionic start "(project name)" https://github.com/TentaShion/Ionic4AngularTemplate --type=angular``` を実行し、このテンプレートを入手します
+3. エラーが出ても気にせず、手順２で作成したワークスペースをVisual Studio Code で開きます
 4. ターミナルを開き```sh run-playground.sh``` を実行します
 5. 手順４が完了するとDocker コンテナ内でコマンド入力できるようになるので、実装作業をしていきます
     * 最初は```node_modules``` をインストールしたいので、コンテナ内で```yarn install --frozen-lockfile``` を実行してください(チーム全体で揃えるため)<br />
-        → もし実行時にエラーが発生したら、プロジェクト管理者に連絡し、ライブラリ依存関係の確認を依頼してください
+        → もし実行時にエラーが発生したら、プロジェクト管理者に連絡し、ライブラリ依存関係の確認を依頼してください<br />
+        → linux 環境でfsevents のインストールは時間がかかるので、気長にお待ちください
     * serve する際は下記のコマンドを入力し、Docker コンテナ外から接続できるようにしてください
         * ```ionic serve --address=0.0.0.0```
         * ```ng serve --address=0.0.0.0```
+    * capacitor を使う場合の手順は下記を参考にしてください
+        1. ```/workspace``` で```npx cap init``` を実行します
+        2. 手順１で生成された```capacitor.config.json``` 内の```webDir``` をラッピングしたいコンテンツのパスに変更します(サンプルでは```projects/main/www``` を指定すればいい感じになるはずです)
+        3. ```ionic build``` を実行します
+        4. ```npx cap add (platform)``` を実行します
+        5. これでプロジェクト自体は生成できますが、ここから先はローカル環境で実行してください
 6. 作業が終わったら、Docker コンテナ内で```exit``` を入力します
 
 
