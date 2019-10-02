@@ -2,7 +2,7 @@
 ARG VersionAngular=8.3.6
 
 # Ionic CLI バージョンの指定
-ARG VersionIonic=5.4.1
+ARG VersionIonic=5.4.2
 
 # Node.js バージョンの指定
 ARG VersionNode=10.16.3-alpine
@@ -11,6 +11,13 @@ ARG VersionNode=10.16.3-alpine
 # Node イメージの指定
 FROM node:${VersionNode}
 
+# C++, Python の設定
+# ベースイメージと同じものを採用
+# https://github.com/nodejs/docker-node/blob/f8c22aeb318ec3df876f8271b9b8a86005f0f53d/10/alpine/Dockerfile
+RUN apk add --no-cache \
+    g++ \
+    make \
+    python
 
 # Node パッケージの設定
 RUN yarn global add @angular/cli@${VersionAngular} ionic@${VersionIonic} \
