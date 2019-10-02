@@ -5,6 +5,8 @@
 このテンプレートでは、下記が設定されています。
 
 * Angular ベースのマルチプロジェクト構成になっています
+* Capacitor 関連ライブラリの依存関係は設定済みです<br />
+→ 実際に使う場合は、追加設定が必要です
 * Docker コンテナを立ち上げることで、コマンド入力できるお試し環境が使えます
     * Angular CLI がGlobal インストールされているので```ng``` コマンドがどこでも使えます
     * ```capacitor open```, ```ionic serve```, ```ng serve``` など自動で画面を開くコマンドは使えません
@@ -17,19 +19,19 @@
 ## 想定している作業環境
 ブログにまとめた「[macOS に自分好みのモバイルアプリ開発環境を整えてみた][moku_tech20190708095349]」をベースにしています。詳細はそちらをご確認ください。
 
-項目 | 想定内容 | 備考
---- | --- | ---
-Android Studio | [Android Studio 3.5][androidstudio] | ローカル環境でAndroid アプリを開発する場合
-Browser | [Google Chrome][chrome] の最新版 | Android 開発時にも使うと便利です
-Browser | [Safari][safari] の最新版 | iOS 開発時に使うと便利です
-Docker | [Docker Desktop Community][docker] 2.1.0.3 | 後術するお試し環境を利用する場合
-Editor | [Visual Studio Code][vscode] の最新版 |  |
-Node | 10.16.3 | 後術するお試し環境と揃えています
-OS | [macOS Mojave][macos]
-VSCode 拡張機能 | [Angular Language Service][vscode_angular] |  |
-VSCode 拡張機能 | [Debugger for Chrome][vscode_chrome] |  |
-VSCode 拡張機能 | [Docker][vscode_docker] | 後術するお試し環境を利用する場合にオススメ
-Xcode | [Xcode 11][xcode] | ローカル環境でiOS アプリを開発する場合
+項目 | macOS | Windows | 備考
+--- | --- | --- | ---
+Android Studio | [Android Studio 3.5][androidstudio] | ? | ローカル環境でAndroid アプリを開発する場合
+Browser | [Google Chrome][chrome] の最新版 | ? | Android 開発時にも使うと便利です
+Browser | [Safari][safari] の最新版 | × | iOS 開発時に使うと便利です
+Docker | [Docker Desktop Community][docker] 2.1.0.3 | ? | 後術するお試し環境を利用する場合
+Editor | [Visual Studio Code][vscode] の最新版 | ? |  |
+Node | 10.16.3 | ? | 後術するお試し環境と揃えています
+OS | [macOS Mojave][macos] | ? |  |
+VSCode 拡張機能 | [Angular Language Service][vscode_angular] | ? |  |
+VSCode 拡張機能 | [Debugger for Chrome][vscode_chrome] | ? |  |
+VSCode 拡張機能 | [Docker][vscode_docker] | ? | 後術するお試し環境を利用する場合にオススメ
+Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発する場合
 
 
 
