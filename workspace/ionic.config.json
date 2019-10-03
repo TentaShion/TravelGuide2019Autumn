@@ -3,7 +3,9 @@
     "projects": {
         "main": {
             "name": "main",
-            "integrations": {},
+            "integrations": {
+                "capacitor": {}
+            },
             "type": "angular",
             "root": "projects/main"
         }
