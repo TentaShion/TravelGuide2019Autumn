@@ -8,8 +8,8 @@
 * Capacitor 関連ライブラリの依存関係は設定済みです<br />
 → 実際に使う場合は、追加設定が必要です
 * Docker コンテナを立ち上げることで、コマンド入力できるお試し環境が使えます
-    * Angular CLI がGlobal インストールされているので```ng``` コマンドがどこでも使えます
-    * ```capacitor open```, ```ionic serve```, ```ng serve``` など自動で画面を開くコマンドは使えません
+    * Angular CLI を使いたい場合は```npx ng``` コマンドを使ってください
+    * ```capacitor open```, ```ionic serve```, ```npx ng serve``` など自動で画面を開くコマンドは使えません
     * Ionic CLI がGlobal インストールされているので```ionic``` コマンドがどこでも使えます
 
 
@@ -45,8 +45,8 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
     * 下記コマンドは、Docker コンテナ内で表示されたものは見ることができないため、制約があります
         * ```capacitor open```(コンテナ内にAndroid Studio やXcode が存在しないので使えないです)
         * ```ionic serve```(サービングされているのでローカルのブラウザから見ることができます)
-        * ```ng e2e```(コンテナ内にChrome が存在しないので使えないです)
-        * ```ng serve```(サービングされているのでローカルのブラウザから見ることができます)
+        * ```npx ng e2e```(コンテナ内にChrome が存在しないので使えないです)
+        * ```npx ng serve```(サービングされているのでローカルのブラウザから見ることができます)
 2. ローカル環境で作業する
     * 環境を整備すれば全てのコマンドが使えます
 
@@ -62,7 +62,7 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
         → linux 環境でfsevents のインストールは時間がかかるので、気長にお待ちください
     * serve する際は下記のコマンドを入力し、Docker コンテナ外から接続できるようにしてください
         * ```ionic serve --address=0.0.0.0```
-        * ```ng serve --address=0.0.0.0```
+        * ```npx ng serve --address=0.0.0.0```
     * capacitor を使う場合の手順は下記を参考にしてください
         1. ```/workspace``` で```npx cap init``` を実行します
         2. 手順１で生成された```capacitor.config.json``` 内の```webDir``` をラッピングしたいコンテンツのパスに変更します(サンプルでは```projects/main/www``` を指定すればいい感じになるはずです)
