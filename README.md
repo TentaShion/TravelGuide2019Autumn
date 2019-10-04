@@ -10,6 +10,7 @@
 → 実際に使う場合は、追加設定が必要です
 * Docker コンテナを立ち上げることで、コマンド入力できるお試し環境が使えます
     * Angular CLI はGlobal インストールされているので```ng``` コマンドがどこでも使えます
+    * Capacitor CLI はGlobal インストールされているので```cap``` コマンドがどこでも使えます
     * ```capacitor open```, ```ionic serve```, ```ng serve``` など自動で画面を開くコマンドは使えません
     * Ionic CLI がGlobal インストールされているので```ionic``` コマンドがどこでも使えます
 
@@ -65,11 +66,16 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
         * ```ionic serve --address=0.0.0.0```
         * ```ng serve --address=0.0.0.0```
     * capacitor を使う場合の手順は下記を参考にしてください
-        1. ```/workspace``` で```cap init``` を実行します
-        2. 手順１で生成された```capacitor.config.json``` 内の```webDir``` をラッピングしたいコンテンツのパスに変更します(サンプルでは```projects/main/www``` を指定すればいい感じになるはずです)
-        3. ```ionic build``` を実行します
-        4. ```cap add (platform)``` を実行します
-        5. これでプロジェクト自体は生成できますが、ここから先はローカル環境で実行してください
+        1. Capacitor を導入したいプロジェクトがある場所に移動します
+        2. ```ionic integrations enable capacitor``` を実行します
+        3. Global インストールされているものと重複するので、手順１で移動した場所で下記を変更します
+            * ```node_modules``` を削除します
+            * ```package.json``` をリセットします
+            * ```yarn.lock``` を削除します
+        4. ```cap init``` を実行します
+        5. ```ionic build``` を実行します(※パスは適宜通してください)
+        6. ```ionic capacitor add (platform)``` を実行します(※パスは適宜通してください)
+        7. これでプロジェクト自体は生成できますが、ここから先はローカル環境で実行してください
 6. 作業が終わったら、Docker コンテナ内で```exit``` を入力します
 
 

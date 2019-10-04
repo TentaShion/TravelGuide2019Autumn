@@ -2,7 +2,10 @@
 FROM node:10.16.3-alpine
 
 # Angular CLI バージョンの指定
-ARG VersionAngular=8.3.6
+ENV VersionAngular=8.3.6
+
+# Capacitor CLI バージョンの指定
+ENV VersionCapacitor=1.2.1
 
 # Ionic CLI バージョンの指定
 ENV VersionIonic=5.4.2
@@ -17,7 +20,7 @@ RUN apk add --no-cache \
     python
 
 # Node パッケージの設定
-RUN yarn global add @angular/cli@${VersionAngular} ionic@${VersionIonic} \
+RUN yarn global add @angular/cli@${VersionAngular} @capacitor/cli@${VersionCapacitor} ionic@${VersionIonic} \
     ## Angular でYarn の利用を既定値にする
     && ng config -g cli.packageManager yarn \
     ## Ionic でYarn の利用を既定値にする
