@@ -80,7 +80,9 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
 
 
 ### ローカル環境
-(編集中)
+1. ```Playground.Dockerfile``` の内容を確認し同じ環境を整備します
+2. ```cd workspace``` で作業場所に移動します
+3. 作業していきます
 
 
 
