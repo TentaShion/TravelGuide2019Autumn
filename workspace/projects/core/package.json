@@ -1,5 +1,8 @@
 {
   "name": "core",
   "version": "0.0.1",
-  "peerDependencies": {}
+  "peerDependencies": {
+    "moment": "^2.24.0",
+    "rxjs": "~6.5.3"
+  }
 }
