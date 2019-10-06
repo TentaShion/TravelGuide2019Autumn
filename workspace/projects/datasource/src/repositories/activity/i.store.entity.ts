@@ -1,9 +1,7 @@
-import { Moment } from "moment";
-
 /**
- * アクティビティのデータ定義
+ * 保存データ
  */
-export interface IActivityEntity {
+export interface IStoreEntity {
 
     /** 操作アクション */
     action?: {
@@ -16,16 +14,16 @@ export interface IActivityEntity {
     }[]
 
     /** 終了日時 */
-    dateFinish?: Moment
+    date_finish?: string
 
     /** 開始日時 */
-    dateStart?: Moment
+    date_start?: string
 
     /** 概要 */
     description?: string
 
     /** アイコン名 */
-    iconName: string
+    icon_name: string
 
     /** 表示タイトル */
     title: string
