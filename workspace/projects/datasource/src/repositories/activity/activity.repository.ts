@@ -1,9 +1,9 @@
 import { Plugins, StoragePlugin } from "@capacitor/core";
 import * as _moment from 'moment';
-import { defer, from, Observable } from 'rxjs';
-import { concatMapTo, map, zip } from "rxjs/operators";
+import { defer, from, Observable, zip } from 'rxjs';
+import { concatMapTo, map } from "rxjs/operators";
 
-import { IActivityEntity } from 'core/core';
+import { IActivityEntity } from 'core';
 import { IStoreEntity } from "./i.store.entity";
 
 const moment = _moment
@@ -26,24 +26,24 @@ export class ActivityRepository {
     /**
      * ストレージの初期化
      */
-    initializeStorage(): Observable<void> {
+    initializeStorage(): Observable<any> {
         return defer(() =>
-            from(this.storage.clear)
+            from(this.storage.clear())
         ).pipe(
-            concatMapTo(zip(
-                defer(() => from(this.storage.set({
+            concatMapTo(defer(() => zip(
+                from(this.storage.set({
                     key: this.getKey('day1'),
                     value: JSON.stringify(this.storeDay1())
-                }))),
-                defer(() => from(this.storage.set({
+                })),
+                from(this.storage.set({
                     key: this.getKey('day2'),
                     value: JSON.stringify(this.storeDay2())
-                }))),
-                defer(() => from(this.storage.set({
+                })),
+                from(this.storage.set({
                     key: this.getKey('day3'),
                     value: JSON.stringify(this.storeDay3())
-                }))),
-            ))
+                }))
+            )))
         )
     }
 

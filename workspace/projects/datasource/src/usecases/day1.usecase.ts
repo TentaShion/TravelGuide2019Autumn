@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { concatMap, concatMapTo } from 'rxjs/operators';
 
-import { IActivityEntity, IShowActivityUseCase } from 'core/core';
+import { IActivityEntity, IShowActivityUseCase } from 'core';
 import { ActivityRepository } from '../repositories/activity/activity.repository';
 
 /**
