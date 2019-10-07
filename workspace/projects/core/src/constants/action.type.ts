@@ -1,7 +1,7 @@
 /**
  * アクションタイプ
  */
-export enum ActionType {
+export enum Action {
 
     /** 電話をかける */
     CallPhone = 'phone',
@@ -12,3 +12,5 @@ export enum ActionType {
     /** Web サイトを表示する */
     ShowWebSite = 'web',
 }
+
+export type ActionType = 'map' | 'phone' | 'web'

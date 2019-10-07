@@ -1,3 +1,5 @@
+import { ActionType } from 'core';
+
 /**
  * 保存データ
  */
@@ -10,7 +12,7 @@ export interface IStoreEntity {
         source: string
 
         /** アクションタイプ */
-        type: 'map' | 'phone' | 'web'
+        type: ActionType
     }[]
 
     /** 終了日時 */

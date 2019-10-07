@@ -1,5 +1,7 @@
 import { Moment } from "moment";
 
+import { ActionType } from '../constants/action.type';
+
 /**
  * アクティビティのデータ定義
  */
@@ -12,7 +14,7 @@ export interface IActivityEntity {
         source: string
 
         /** アクションタイプ */
-        type: 'map' | 'phone' | 'web'
+        type: ActionType
     }[]
 
     /** 終了日時 */

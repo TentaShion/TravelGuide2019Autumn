@@ -3,7 +3,7 @@ import * as _moment from 'moment';
 import { defer, from, Observable, zip } from 'rxjs';
 import { concatMapTo, map } from "rxjs/operators";
 
-import { IActivityEntity } from 'core';
+import { Action, IActivityEntity } from 'core';
 import { IStoreEntity } from "./i.store.entity";
 
 const moment = _moment
@@ -95,15 +95,15 @@ export class ActivityRepository {
                 action: [
                     {
                         source: 'https://goo.gl/maps/ovmfF89CTZP2',
-                        type: 'map'
+                        type: Action.ShowMap
                     },
                     {
                         source: '000-0000-0000',
-                        type: 'phone'
+                        type: Action.CallPhone
                     },
                     {
                         source: 'https://mokumokulog.netlify.com',
-                        type: 'web'
+                        type: Action.ShowWebSite
                     }
                 ],
                 date_finish: '2019-10-04T15:19:26+09:00',
@@ -124,15 +124,15 @@ export class ActivityRepository {
                 action: [
                     {
                         source: 'https://goo.gl/maps/ovmfF89CTZP2',
-                        type: 'map'
+                        type: Action.ShowMap
                     },
                     {
                         source: '000-0000-0000',
-                        type: 'phone'
+                        type: Action.CallPhone
                     },
                     {
                         source: 'https://mokumokulog.netlify.com',
-                        type: 'web'
+                        type: Action.ShowWebSite
                     }
                 ],
                 date_finish: '2019-10-05T15:19:26+09:00',
@@ -153,15 +153,15 @@ export class ActivityRepository {
                 action: [
                     {
                         source: 'https://goo.gl/maps/ovmfF89CTZP2',
-                        type: 'map'
+                        type: Action.ShowMap
                     },
                     {
                         source: '000-0000-0000',
-                        type: 'phone'
+                        type: Action.CallPhone
                     },
                     {
                         source: 'https://mokumokulog.netlify.com',
-                        type: 'web'
+                        type: Action.ShowWebSite
                     }
                 ],
                 date_finish: '2019-10-06T15:19:26+09:00',
