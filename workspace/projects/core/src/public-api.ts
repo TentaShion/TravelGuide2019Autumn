@@ -3,7 +3,8 @@
  */
 
 export { Action, ActionType } from './constants/action.type'
+export { Tabs, TabsType } from './constants/tabs.type'
 
 export { IActivityEntity } from './entities/i.activity.entity'
 
-export { IShowActivityUseCase } from './usecases/i.show-activity.usecase'
+export { CIShowActivityUseCase } from './usecases/ci.show-activity.usecase'

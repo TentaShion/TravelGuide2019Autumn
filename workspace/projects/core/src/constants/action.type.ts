@@ -13,4 +13,11 @@ export enum Action {
     ShowWebSite = 'web',
 }
 
+/**
+ * アクションタイプの型定義
+ *
+ * 電話をかける: 'phone'
+ * 地図を表示する: 'map'
+ * Web サイトを表示する: 'web'
+ */
 export type ActionType = 'map' | 'phone' | 'web'

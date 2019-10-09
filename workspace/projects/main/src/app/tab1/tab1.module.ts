@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
-import { DataSourceModule, Day1UseCase } from 'datasource';
 import { Tab1Page } from './tab1.page';
 
 @NgModule({
@@ -13,13 +12,11 @@ import { Tab1Page } from './tab1.page';
   ],
   imports: [
     CommonModule,
-    DataSourceModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
   providers: [
-    Day1UseCase
   ]
 })
 export class Tab1PageModule { }

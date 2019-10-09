@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'
 
-import { ActivityRepository } from './repositories/activity/activity.repository';
+import { ActivityRepository } from './repositories/activity/activity.repository'
 
 /**
  * DataSource プロジェクトのModule 設定

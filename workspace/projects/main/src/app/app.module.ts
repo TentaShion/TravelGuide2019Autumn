@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { RouteReuseStrategy } from '@angular/router'
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { CIShowActivityUseCase } from 'core'
+import { ActivityRepositoryKey, DataSourceModule, ShowActivityUseCase } from 'datasource'
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -15,9 +17,12 @@ import { AppComponent } from './app.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    DataSourceModule,
     IonicModule.forRoot()
   ],
   providers: [
+    { provide: ActivityRepositoryKey, useValue: 'ActivityRepository' },
+    { provide: CIShowActivityUseCase, useClass: ShowActivityUseCase },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
 

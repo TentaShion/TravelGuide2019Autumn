@@ -1,6 +1,6 @@
-import { Moment } from "moment";
+import { Moment } from 'moment'
 
-import { ActionType } from '../constants/action.type';
+import { ActionType } from '../constants/action.type'
 
 /**
  * アクティビティのデータ定義

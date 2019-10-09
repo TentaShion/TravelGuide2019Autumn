@@ -1,4 +1,4 @@
-import { ActionType } from 'core';
+import { ActionType } from 'core'
 
 /**
  * 保存データ
