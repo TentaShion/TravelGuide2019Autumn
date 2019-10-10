@@ -34,7 +34,7 @@ export class ActivityRepository {
     /**
      * ストレージの初期化
      */
-    initializeStorage(): Observable<any> {
+    initializeStorage() {
         return defer(() =>
             from(this.storage.clear())
         ).pipe(
@@ -67,16 +67,14 @@ export class ActivityRepository {
             map<{ value: string }, IStoreEntity[]>(stored => stored && stored.value && JSON.parse(stored.value)),
             map<IStoreEntity[], IActivityEntity[]>(mapped => {
                 if (Array.isArray(mapped) && 0 < mapped.length) {
-                    return mapped.map<IActivityEntity>(item => {
-                        return {
-                            action: item.action,
-                            dateFinish: moment(item.date_finish),
-                            dateStart: moment(item.date_start),
-                            description: item.description,
-                            iconName: item.icon_name,
-                            title: item.title
-                        }
-                    })
+                    return mapped.map<IActivityEntity>(item => ({
+                        action: item.action,
+                        dateFinish: moment(item.date_finish),
+                        dateStart: moment(item.date_start),
+                        description: item.description,
+                        iconName: item.icon_name,
+                        title: item.title
+                    }))
                 } else {
                     return []
                 }
