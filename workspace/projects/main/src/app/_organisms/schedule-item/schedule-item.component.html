@@ -1,0 +1,22 @@
+<ion-item-sliding>
+  <ion-item>
+    <ion-icon [name]="data.iconName" item-start></ion-icon>
+    <ion-label class="ion-text-wrap">
+      <p style="font-size: small;">
+        {{ (data.dateStart && data.dateStart.format('MM/DD HH:MM'))|| '' }}
+        〜
+        {{ (data.dateFinish && data.dateFinish.format('MM/DD HH:MM')) || '' }}
+      </p>
+      <p style="color: black;">{{ data.title }}</p>
+      <p style="font-size: small;">{{ data.description }}</p>
+    </ion-label>
+  </ion-item>
+  <ion-item-options side="end">
+    <ng-container *ngFor="let item of data.action">
+      <ng-container [ngSwitch]="item.type">
+        <app-show-map-item-option *ngSwitchCase="actionType.ShowMap" [url]="item.source"></app-show-map-item-option>
+        <app-show-web-item-option *ngSwitchCase="actionType.ShowWebSite" [url]="item.source"></app-show-web-item-option>
+      </ng-container>
+    </ng-container>
+  </ion-item-options>
+</ion-item-sliding>
