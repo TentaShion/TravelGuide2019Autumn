@@ -6,4 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <app-schedule-item *ngFor="let item of data" [data]="item"></app-schedule-item>
+  </ion-list>
+</ion-content>
