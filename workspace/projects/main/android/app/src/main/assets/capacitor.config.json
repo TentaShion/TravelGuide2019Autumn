@@ -1,0 +1,7 @@
+{
+  "appId": "work.shion.travelguide2019autumn",
+  "appName": "TravelGuide2019Autumn",
+  "bundledWebRuntime": true,
+  "npmClient": "yarn",
+  "webDir": "www"
+}
