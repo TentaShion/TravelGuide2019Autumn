@@ -1,18 +1,18 @@
-import { Component, OnDestroy, OnInit, } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs'
 
 import { IActivityEntity, Tabs } from 'core'
 import { ShowActivityUseCase } from 'datasource'
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-day1',
+  templateUrl: './day1.page.html'
 })
-export class Tab1Page implements OnDestroy, OnInit {
+export class Day1Page implements OnDestroy, OnInit {
 
   data: IActivityEntity[]
   private loadTask: Subscription
+  readonly title = '１日目'
 
 
   constructor(
@@ -20,8 +20,7 @@ export class Tab1Page implements OnDestroy, OnInit {
   ) {
   }
 
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.loadTask = this.showActivityUseCase.load(Tabs.Day1).subscribe(
       (data: IActivityEntity[]) => {
         this.data = data
