@@ -3,9 +3,9 @@
     <ion-icon [name]="data.iconName" item-start></ion-icon>
     <ion-label class="ion-text-wrap">
       <p style="font-size: small;">
-        {{ (data.dateStart && data.dateStart.format('MM/DD hh:mm'))|| '' }}
+        {{ (data.dateStart && data.dateStart.format('MM/DD HH:mm'))|| '' }}
         〜
-        {{ (data.dateFinish && data.dateFinish.format('MM/DD hh:mm')) || '' }}
+        {{ (data.dateFinish && data.dateFinish.format('MM/DD HH:mm')) || '' }}
       </p>
       <p style="color: black;">{{ data.title }}</p>
       <p style="font-size: small;">{{ data.description }}</p>
