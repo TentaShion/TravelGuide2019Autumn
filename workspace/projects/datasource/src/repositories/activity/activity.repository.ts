@@ -69,8 +69,8 @@ export class ActivityRepository {
                 if (Array.isArray(mapped) && 0 < mapped.length) {
                     return mapped.map<IActivityEntity>(item => ({
                         action: item.action,
-                        dateFinish: moment(item.date_finish),
-                        dateStart: moment(item.date_start),
+                        dateFinish: item.date_finish && moment(item.date_finish),
+                        dateStart: item.date_start && moment(item.date_start),
                         description: item.description,
                         iconName: item.icon_name,
                         title: item.title
