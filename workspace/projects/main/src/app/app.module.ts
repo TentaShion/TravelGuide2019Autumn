@@ -18,7 +18,9 @@ import { ActivityRepositoryKey, DataSourceModule, ShowActivityUseCase } from 'da
     AppRoutingModule,
     BrowserModule,
     DataSourceModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot({
+      mode: 'md'
+    })
   ],
   providers: [
     { provide: ActivityRepositoryKey, useValue: 'ActivityRepository' },
