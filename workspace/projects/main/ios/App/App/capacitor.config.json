@@ -3,5 +3,10 @@
   "appName": "TravelGuide2019Autumn",
   "bundledWebRuntime": true,
   "npmClient": "yarn",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1000
+    }
+  },
   "webDir": "www"
 }
