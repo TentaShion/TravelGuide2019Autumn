@@ -18,4 +18,9 @@ public class MainActivity extends BridgeActivity {
             // Ex: add(TotallyAwesomePlugin.class);
         }});
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
